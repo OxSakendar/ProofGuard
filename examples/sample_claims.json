@@ -7,60 +7,708 @@
     "evidence": [
       {
         "source_url": "https://deepmind.google/discover/blog/alphagenome-v2",
-        "content_hash": "a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90",
+        "mock_content": "October 15, 2026: DeepMind announces AlphaGenome v2, a state-of-the-art model for full-genome non-coding variant impact prediction.",
         "source_version": "1.0",
-        "mock_content": "October 15, 2026: DeepMind announces AlphaGenome v2, a state-of-the-art model for full-genome non-coding variant impact prediction."
+        "content_hash": "7d41d2bf8daa9aa171d21cdba6a9b19354cb2751f46190162cb688adeb8d9305"
       }
     ],
-    "expected_verdict": "VERIFIED"
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "DeepMind announcement confirms release date of October 15, 2026 and variant scoring capability."
+    ],
+    "contradictions": [],
+    "explanation": "External press release matches title, date, and functional scope."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "Ethereum Dencun EIP-4844 Upgrade Mainnet Activation",
+    "description": "Ethereum mainnet successfully activated proto-danksharding (EIP-4844) introducing blob-carrying transactions to reduce L2 transaction fees.",
+    "criteria": "Ethereum Foundation consensus specification and blockchain block explorer telemetry confirming epoch activation.",
+    "evidence": [
+      {
+        "source_url": "https://blog.ethereum.org/2026/dencun-mainnet-upgrade",
+        "mock_content": "Epoch 269568 successfully finalized with EIP-4844 proto-danksharding blobs enabled across all executing nodes.",
+        "source_version": "1.0",
+        "content_hash": "e7a54876200e5459ebfbdbd4675c326783aa2cbb54f10a4cca365bdde424c70b"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "Ethereum Foundation bulletin confirms epoch finalization with blob transactions active."
+    ],
+    "contradictions": [],
+    "explanation": "Consensus finalization confirmed by official network upgrade bulletin."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "NASA Europa Clipper Trajectory Insertion",
+    "description": "NASA JPL mission control confirmed successful trajectory injection of Europa Clipper en route to Jupiter's icy moon.",
+    "criteria": "Official NASA Jet Propulsion Laboratory mission bulletin confirming spacecraft separation and orbital parameter acquisition.",
+    "evidence": [
+      {
+        "source_url": "https://www.jpl.nasa.gov/news/europa-clipper-trajectory-confirmed",
+        "mock_content": "Mission Control at NASA JPL confirmed Europa Clipper acquired two-way communication and entered planned Mars gravity-assist trajectory.",
+        "source_version": "1.0",
+        "content_hash": "c2f5a18c5fc6a9cd9576645d191689ed109ab152278c001773496331a706a433"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "JPL confirmation of two-way telemetry and planned trajectory insertion."
+    ],
+    "contradictions": [],
+    "explanation": "Spacecraft telemetry validates successful launch and interplanetary injection."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "CERN High-Luminosity LHC Quadrupole Magnet Milestone",
+    "description": "CERN verified the successful operational test of prototype Nb3Sn superconducting quadrupole magnets reaching 11.8 Tesla.",
+    "criteria": "CERN technical preprint or official accelerator progress report confirming nominal 11.8 Tesla magnetic field without quench.",
+    "evidence": [
+      {
+        "source_url": "https://home.cern/news/technical/hl-lhc-magnet-test-118t",
+        "mock_content": "Technical Note: The HL-LHC inner triplet Nb3Sn quadrupole achieved and maintained 11.8 Tesla operating field under 1.9 Kelvin refrigeration.",
+        "source_version": "1.0",
+        "content_hash": "07f4f6d78f1efcae3cbeb076f666793dc7513aa40187bd318112ab7784baae8e"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "CERN technical note records 11.8 T sustained field at 1.9 K."
+    ],
+    "contradictions": [],
+    "explanation": "Scientific experimental report validates the magnetic field benchmark."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "WHO Malaria Vaccine R21/Matrix-M Distribution Target",
+    "description": "The World Health Organization confirmed deployment of over 5 million doses of the R21/Matrix-M malaria vaccine across high-burden African regions.",
+    "criteria": "Official WHO health directive or Gavi vaccine rollout bulletin validating milestone.",
+    "evidence": [
+      {
+        "source_url": "https://www.who.int/news/item/malaria-r21-deployment-milestone",
+        "mock_content": "Geneva: WHO and Gavi announce cumulative delivery exceeding 5.2 million doses of R21/Matrix-M to Central and West African health ministries.",
+        "source_version": "1.0",
+        "content_hash": "8e895e80e8a13bf07ba0c1ea87c55d4e946a8d3dbc8e137092386e59259ca5ae"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "Official WHO/Gavi report documents 5.2 million doses delivered."
+    ],
+    "contradictions": [],
+    "explanation": "International health organization statistics confirm threshold exceeded."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "Alliance for OpenUSD Core Specification v1.0 Standard",
+    "description": "AOUSD published the official OpenUSD Core Specification v1.0 standardizing interoperability for 3D computer graphics ecosystems.",
+    "criteria": "Official AOUSD technical committee publication confirming release of Core Specification v1.0.",
+    "evidence": [
+      {
+        "source_url": "https://aousd.org/specifications/core-v1-announcement",
+        "mock_content": "The Alliance for OpenUSD (AOUSD) officially ratifies and releases the OpenUSD Core Specification v1.0 as an open multi-industry standard.",
+        "source_version": "1.0",
+        "content_hash": "ed54da61c988020053df7ba4aca4ab2c0d7169a01bcc08cf025b6436f2ecc629"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "AOUSD steering committee ratified and published Core Specification v1.0."
+    ],
+    "contradictions": [],
+    "explanation": "Official standards body ratification document confirms release."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "NOAA Arctic Sea Ice Minimum Extent Record",
+    "description": "National Snow and Ice Data Center satellite telemetry recorded the 2026 annual minimum Arctic sea ice extent at 4.28 million square kilometers.",
+    "criteria": "NSIDC official sea ice index analysis confirming exact measured extent value.",
+    "evidence": [
+      {
+        "source_url": "https://nsidc.org/arcticseaicenews/2026/annual-minimum-report",
+        "mock_content": "NSIDC Arctic Sea Ice News: Sea ice extent reached its annual minimum of 4.28 million sq km on September 18, 2026.",
+        "source_version": "1.0",
+        "content_hash": "50ac7b26aa7f27c8df99f07202a2f32c56d7bf4461341406e1c890bf691e5d44"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "NSIDC telemetry records 4.28 million sq km on September 18, 2026."
+    ],
+    "contradictions": [],
+    "explanation": "Satellite telemetry directly corroborates stated metric."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "ISO/IEC 42001 Artificial Intelligence Management Certification",
+    "description": "Enterprise software provider CloudCore passed formal third-party audit and achieved ISO/IEC 42001:2023 AI Management certification.",
+    "criteria": "Accredited certification body certificate and public directory record verifying ISO/IEC 42001 compliance.",
+    "evidence": [
+      {
+        "source_url": "https://certificates.bsigroup.com/directory/cloudcore-iso42001",
+        "mock_content": "BSI Directory Verification: CloudCore Inc. holds valid Certificate AI-784019 in conformance with ISO/IEC 42001:2023.",
+        "source_version": "1.0",
+        "content_hash": "c5d50f8341cd00f64e5b5f4054859b24dc66c9e28e7253b26e94ec1d08cc2e0c"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "Accredited registrar confirms valid certificate under ISO/IEC 42001:2023."
+    ],
+    "contradictions": [],
+    "explanation": "Official registrar certificate directory confirms compliance."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "Solana Firedancer Validator Testnet Performance Milestone",
+    "description": "Jump Crypto demonstrated the independent Firedancer C++ validator client sustaining 1,000,000 transactions per second in testnet environment.",
+    "criteria": "Public benchmark repository release and independent testnet telemetry log confirming sustained 1M TPS throughput.",
+    "evidence": [
+      {
+        "source_url": "https://firedancer.jumpcrypto.com/benchmarks/testnet-1m-tps",
+        "mock_content": "Testnet Run #409: Firedancer achieved sustained synthetic load of 1,024,000 TPS with sub-400ms block production.",
+        "source_version": "1.0",
+        "content_hash": "1cce95f80cb0dd08c5df4b0e30b2abe2a3111435c431ac1968efaa1691228c1b"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "Engineering telemetry records 1,024,000 TPS under testnet conditions."
+    ],
+    "contradictions": [],
+    "explanation": "Telemetry benchmark validates the 1M TPS performance milestone."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "CRISPR Cas12a Sickle Cell Phase III Clinical Endpoint",
+    "description": "Therapeutics consortium reported Phase III trial results where 94% of severe sickle cell patients experienced zero vaso-occlusive crises for 12 months.",
+    "criteria": "Peer-reviewed medical publication or clinical trial registry final results confirming >=90% crisis-free rate.",
+    "evidence": [
+      {
+        "source_url": "https://www.nejm.org/doi/10.1056/NEJMoa2604112",
+        "mock_content": "Primary Endpoint: 47 of 50 evaluable patients (94.0%) achieved complete absence of severe vaso-occlusive crises over 12 consecutive months.",
+        "source_version": "1.0",
+        "content_hash": "da5fc88c7b7d999e36159a2887787011df47746151b972f6909756259809270a"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "NEJM publication documents 94.0% crisis-free patient response."
+    ],
+    "contradictions": [],
+    "explanation": "Peer-reviewed medical trial results confirm primary clinical endpoint."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "Google DeepMind AlphaFold 3 Biomolecular Complex Modeling",
+    "description": "AlphaFold 3 demonstrated atomic-level prediction accuracy for protein interactions with DNA, RNA, ligands, and post-translational modifications.",
+    "criteria": "Nature scientific research paper validating structural prediction accuracy across diverse biomolecular interaction classes.",
+    "evidence": [
+      {
+        "source_url": "https://www.nature.com/articles/s41586-024-alphafold3-joint",
+        "mock_content": "AlphaFold 3 demonstrates substantial accuracy gains in modeling protein complexes with nucleic acids, small molecule ligands, and chemical modifications.",
+        "source_version": "1.0",
+        "content_hash": "2ef52d644e6f959a5ea37ff7a9415845ff9a334b37b7793eb8d56534cb421bf8"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "Nature paper confirms joint biomolecular structural prediction capabilities."
+    ],
+    "contradictions": [],
+    "explanation": "Peer-reviewed publication validates the multimolecular predictive model."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "Tokenized US Treasury Bills Market Cap Milestone",
+    "description": "On-chain tokenized US short-term Treasury bill instruments exceeded $2.5 billion in total circulating market capitalization.",
+    "criteria": "RWA.xyz aggregated on-chain registry and DTCC tokenization telemetry verifying cumulative circulating supply.",
+    "evidence": [
+      {
+        "source_url": "https://app.rwa.xyz/treasuries/summary-2026",
+        "mock_content": "Tokenized Treasuries Dashboard: Total circulating value of public blockchain US Treasury tokens crossed $2,580,000,000.",
+        "source_version": "1.0",
+        "content_hash": "7e393f6014530a11b6fa8df585c9a670be2e41cdcc59e1ab61b23ad9d662f1b7"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "On-chain registry confirms $2.58B circulating volume across tokenized Treasuries."
+    ],
+    "contradictions": [],
+    "explanation": "Independent analytics provider validates market capitalization milestone."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "ITER Fusion Reactor Vacuum Vessel Sector Sub-Assembly",
+    "description": "ITER Organization confirmed completion of sector sub-assembly for the central tokamak vacuum vessel at Saint-Paul-les-Durance.",
+    "criteria": "Official ITER Council progress communique confirming sector lifting and alignment in the assembly hall.",
+    "evidence": [
+      {
+        "source_url": "https://www.iter.org/newsline/sector-assembly-milestone",
+        "mock_content": "ITER Newsline: Sector Module #6 was successfully transferred and docked into the tokamak pit, meeting millimeter-precision alignment.",
+        "source_version": "1.0",
+        "content_hash": "c2436fa89267e4b963d909f42f1930d88943cdde03acf9e8e372ffa055df95e8"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "ITER Newsline confirms Sector Module #6 docked in tokamak pit."
+    ],
+    "contradictions": [],
+    "explanation": "Official international research facility communique validates assembly completion."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "Falcon Heavy Synchronous Drone Ship Recovery",
+    "description": "SpaceX successfully recovered both Falcon Heavy side-boosters simultaneously on autonomous drone ships in the Atlantic Ocean.",
+    "criteria": "Federal Aviation Administration launch license telemetry and SpaceX mission webcast flight logs.",
+    "evidence": [
+      {
+        "source_url": "https://www.spacex.com/launches/mission-fh-recovery-log",
+        "mock_content": "Boosters B1089 and B1090 completed simultaneous touchdown on droneships 'A Shortfall of Gravitas' and 'Just Read the Instructions'.",
+        "source_version": "1.0",
+        "content_hash": "6a6a54ed96744e16d7ac9f56f5b03fe58780d38e5f91879a528dcd3c7996eb17"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "Mission log records dual simultaneous booster touchdowns on designated drone ships."
+    ],
+    "contradictions": [],
+    "explanation": "Flight logs and official launch operator telemetry verify dual recovery."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "Chainlink CCIP Cumulative Transaction Volume",
+    "description": "Chainlink Cross-Chain Interoperability Protocol (CCIP) surpassed $10 billion in cumulative cross-chain value transferred.",
+    "criteria": "DefiLlama bridge analytics and Chainlink on-chain explorer telemetry confirming aggregate volume.",
+    "evidence": [
+      {
+        "source_url": "https://defillama.com/bridges/chainlink-ccip",
+        "mock_content": "DefiLlama Metrics: Chainlink CCIP all-time routed cross-chain volume reached $10,420,000,000 across 12 supported mainnet chains.",
+        "source_version": "1.0",
+        "content_hash": "eaa2d34eaef355ba0908ad5a4aa582b715a868f501ad1dbd579d93568ebb54b2"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "DefiLlama metrics record $10.42B cumulative volume across 12 chains."
+    ],
+    "contradictions": [],
+    "explanation": "Aggregated on-chain protocol metrics confirm target volume exceeded."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "NIST Post-Quantum Cryptography FIPS Standards Publication",
+    "description": "The National Institute of Standards and Technology formally published FIPS 203 (ML-KEM) and FIPS 204 (ML-DSA) as official federal standards.",
+    "criteria": "Federal Register notice and NIST Computer Security Resource Center publication of finalized FIPS documents.",
+    "evidence": [
+      {
+        "source_url": "https://csrc.nist.gov/publications/detail/fips/203/final",
+        "mock_content": "NIST CSRC: Federal Information Processing Standards (FIPS) 203 Module-Lattice-Based Key-Encapsulation Mechanism is officially released as final.",
+        "source_version": "1.0",
+        "content_hash": "e15aefdc842336ac647de8a131dff6e4c03555682396af4ca956f48b13419881"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "NIST CSRC confirms official publication of final FIPS 203 and 204."
+    ],
+    "contradictions": [],
+    "explanation": "Official US government standards publication confirms regulatory finalization."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "OECD Global Minimum Corporate Tax Enforcement",
+    "description": "Over 140 countries began domestic legislative enforcement of the OECD Pillar Two 15% minimum corporate tax framework.",
+    "criteria": "OECD International Tax Reform progress monitor verifying enacted jurisdiction count.",
+    "evidence": [
+      {
+        "source_url": "https://www.oecd.org/tax/beps/pillar-two-implementation-summary",
+        "mock_content": "OECD Report: 142 jurisdictions of the Inclusive Framework have enacted or introduced domestic legislation for the 15% GloBE minimum tax.",
+        "source_version": "1.0",
+        "content_hash": "8b04686b13c52b5f46a1ed7685a504a450ca1d9ac79686d4713e0cfb752351ab"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "OECD report documents 142 jurisdictions enacting Pillar Two legislation."
+    ],
+    "contradictions": [],
+    "explanation": "OECD international treaty database confirms qualifying jurisdiction count."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "WebKit WebAssembly Garbage Collection Enablement",
+    "description": "Apple WebKit engineering enabled Wasm GC (Garbage Collection) by default across Safari browser builds to support Kotlin and Dart runtimes.",
+    "criteria": "Official WebKit feature status repository commit and release notes.",
+    "evidence": [
+      {
+        "source_url": "https://webkit.org/blog/wasm-gc-default-release",
+        "mock_content": "WebKit Feature Status: WebAssembly Garbage Collection (WasmGC) is now enabled by default in WebKit trunk and Safari Technology Preview.",
+        "source_version": "1.0",
+        "content_hash": "65eb6220ad7e36820c377b45b18d1a0d204650ba61d2a72b6074d9efb637ae28"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "WebKit engineering notes confirm WasmGC enabled by default in trunk."
+    ],
+    "contradictions": [],
+    "explanation": "Browser engine official release announcement confirms feature activation."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "Tesla Megapack 400MWh Moss Landing BESS Expansion",
+    "description": "Pacific Gas and Electric interconnected an additional 400 MWh of Tesla Megapack battery storage at the Moss Landing substation.",
+    "criteria": "California ISO (CAISO) grid interconnection queue and commercial operation declaration.",
+    "evidence": [
+      {
+        "source_url": "https://www.caiso.com/market/moss-landing-phase3-cod",
+        "mock_content": "CAISO Grid Operations: Commercial Operation Date (COD) certified for Moss Landing BESS Phase 3 adding 400 MWh nominal capacity.",
+        "source_version": "1.0",
+        "content_hash": "a6afd5ad717051edbae598e68cbfb3c9bcda296aeace886487cf1a5b4c08276b"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "CAISO operations notice certifies COD for 400 MWh expansion."
+    ],
+    "contradictions": [],
+    "explanation": "Grid operator regulatory filing confirms interconnection and commercial operation."
+  },
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "Unicode 16.0 Specification Release",
+    "description": "The Unicode Consortium officially released Unicode Standard Version 16.0, adding 5,185 new characters and 7 new scripts.",
+    "criteria": "Official Unicode Consortium press release and character code chart specification.",
+    "evidence": [
+      {
+        "source_url": "https://home.unicode.org/announcements/unicode-16-0-released",
+        "mock_content": "Unicode Standard Version 16.0 is now available, adding 5,185 characters for modern and historical scripts, plus new emoji symbols.",
+        "source_version": "1.0",
+        "content_hash": "34f4b19a4f0606125b6ecd8e0fb9fd42df4fb635e9d683e3c2a933f988c5210a"
+      }
+    ],
+    "expected_verdict": "VERIFIED",
+    "supporting_facts": [
+      "Unicode Consortium announcement confirms Version 16.0 with 5,185 new characters."
+    ],
+    "contradictions": [],
+    "explanation": "Official standards organization release announcement confirms parameters."
   },
   {
     "scenario": "REJECTED_CLAIM",
-    "title": "Claim of Artificial General Intelligence Milestone",
-    "description": "LabX claimed their synthetic biology agent achieved autonomous general intelligence passing all human benchmarks on November 1, 2026.",
+    "title": "Ambient Pressure Room-Temperature Superconductor Discovery",
+    "description": "Lab preprint claimed synthesized modified lead-apatite crystals exhibited zero electrical resistance at 310 Kelvin and ambient pressure.",
+    "criteria": "Independent multi-institution crystallographic and magnetic susceptibility confirmation of zero resistivity.",
+    "evidence": [
+      {
+        "source_url": "https://arxiv.org/abs/2602.superconductor-independent-audit",
+        "mock_content": "Independent Re-measurement: SQUID magnetometry across 4 independent labs confirms ferromagnetic impurities and copper sulfide phase transitions, with finite resistance > 10^-3 ohm-cm. Zero superconductivity detected.",
+        "source_version": "1.0",
+        "content_hash": "859f6b6e64fd73ef727e308995584dd8991dfb249650a6009072e529597c4f18"
+      }
+    ],
+    "expected_verdict": "REJECTED",
+    "supporting_facts": [],
+    "contradictions": [
+      "Independent magnetometry revealed finite resistance; samples failed superconductivity tests."
+    ],
+    "explanation": "Independent physical replication tests refute the claim of zero electrical resistance."
+  },
+  {
+    "scenario": "REJECTED_CLAIM",
+    "title": "Zero-Day Remote Code Execution Vulnerability in OpenSSH 9.8",
+    "description": "Anonymous security forum disclosure claimed an unauthenticated remote root shell vulnerability in default OpenSSH 9.8 server installations.",
+    "criteria": "Official OpenBSD/OpenSSH security advisory or CVE confirmation of reproducible remote root execution.",
+    "evidence": [
+      {
+        "source_url": "https://www.openssh.com/security-bulletin-98-audit",
+        "mock_content": "OpenSSH Security Bulletin: The circulating exploit script relies on invalid protocol headers resulting in immediate socket termination. No code execution is possible; claim is a hoax.",
+        "source_version": "1.0",
+        "content_hash": "1be0edb7668dc92a7d9b4d68dbe37600d564ac8924624fb56570624bcd5a1785"
+      }
+    ],
+    "expected_verdict": "REJECTED",
+    "supporting_facts": [],
+    "contradictions": [
+      "Vendor security bulletin proves script results in immediate socket termination without execution."
+    ],
+    "explanation": "Maintainer security bulletin confirms alleged exploit is non-functional."
+  },
+  {
+    "scenario": "REJECTED_CLAIM",
+    "title": "LabX Autonomous Artificial General Intelligence Milestone",
+    "description": "LabX claimed their synthetic biology agent achieved autonomous general intelligence passing all human benchmarks without prompting.",
     "criteria": "Independent peer-reviewed verification or consensus confirmation of autonomous general intelligence without human intervention.",
     "evidence": [
       {
         "source_url": "https://audit.ai-standards.org/evaluations/labx-debunk",
-        "content_hash": "b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90a1",
+        "mock_content": "Official Audit: The LabX submission contained prompt leakage and pre-programmed test outputs. The claim of autonomous general intelligence is formally refuted.",
         "source_version": "1.0",
-        "mock_content": "Official Audit: The LabX submission contained prompt leakage and pre-programmed test outputs. The claim of autonomous general intelligence is formally refuted."
+        "content_hash": "02469c068c74c5987a0f454655e1078f7cf0c3c9860873faa784ef5518401c19"
       }
     ],
-    "expected_verdict": "REJECTED"
+    "expected_verdict": "REJECTED",
+    "supporting_facts": [],
+    "contradictions": [
+      "Audit discovered pre-programmed test outputs and prompt leakage."
+    ],
+    "explanation": "Independent audit report demonstrates manipulated evaluation data."
+  },
+  {
+    "scenario": "REJECTED_CLAIM",
+    "title": "DeFi Protocol Full Solvency and 100% Reserve Collateralization",
+    "description": "YieldLend announced its algorithmic stablecoin maintained 100% verifiable liquid collateral backing across on-chain treasuries.",
+    "criteria": "Independent crypto auditing firm reserve report and on-chain asset verification matching circulating liability.",
+    "evidence": [
+      {
+        "source_url": "https://certik.com/reports/yieldlend-reserve-forensic",
+        "mock_content": "CertiK Forensic Audit: On-chain reserve analysis reveals an unbacked deficit of $78M. Circulating tokens exceed verified reserves by 42%. Solvency claim is false.",
+        "source_version": "1.0",
+        "content_hash": "4a69ae1c6cbc8bdeb606e39176aa50c74d7c677549df9c441ca63fd46a9918a4"
+      }
+    ],
+    "expected_verdict": "REJECTED",
+    "supporting_facts": [],
+    "contradictions": [
+      "Auditor identified $78M reserve shortfall with circulating tokens exceeding collateral."
+    ],
+    "explanation": "On-chain forensic audit disproves 100% reserve backing."
+  },
+  {
+    "scenario": "REJECTED_CLAIM",
+    "title": "Commercial Supersonic Overland Flight FAA Exemption Approval",
+    "description": "Aviation startup Aerofast asserted the FAA granted commercial airworthiness exemption for Mach 1.6 overland passenger flights.",
+    "criteria": "Federal Aviation Administration official docket regulatory exemption order published in the Federal Register.",
+    "evidence": [
+      {
+        "source_url": "https://www.faa.gov/regulations/dockets/aerofast-overland-ruling",
+        "mock_content": "FAA Docket Order #2026-441: The petition for exemption from 14 CFR 91.817 (overland supersonic flight ban) is DENIED due to unmitigated sonic boom decibel impact.",
+        "source_version": "1.0",
+        "content_hash": "14003904a994135034840e8a99dad06eea0822aa77636540cee267689f62a426"
+      }
+    ],
+    "expected_verdict": "REJECTED",
+    "supporting_facts": [],
+    "contradictions": [
+      "FAA officially denied the exemption under Docket #2026-441."
+    ],
+    "explanation": "Regulatory docket confirms formal denial of supersonic overland permit."
+  },
+  {
+    "scenario": "REJECTED_CLAIM",
+    "title": "Global Conglomerate Carbon Neutral Net-Zero FY2025 Audit",
+    "description": "Apex Mining Group declared their corporate operations achieved net-zero carbon footprint in FY2025 verified by international auditors.",
+    "criteria": "Accredited greenhouse gas verification statement confirming Scope 1, 2, and 3 carbon neutralization.",
+    "evidence": [
+      {
+        "source_url": "https://carbonmarketwatch.org/investigations/apex-mining-audit",
+        "mock_content": "Investigation Findings: Over 82% of purchased offset credits originated from expired forestry reserves with zero additionality. Net-zero declaration is fundamentally fraudulent.",
+        "source_version": "1.0",
+        "content_hash": "d61b5b7d668c2d9e189954d89f3138faf6761dc9770a0f4e8040a10e5e770801"
+      }
+    ],
+    "expected_verdict": "REJECTED",
+    "supporting_facts": [],
+    "contradictions": [
+      "82% of offsets lacked additionality; emissions neutralization claim refuted."
+    ],
+    "explanation": "Investigative carbon audit proves offset credits were invalid."
+  },
+  {
+    "scenario": "REJECTED_CLAIM",
+    "title": "Perpetual Kinetic Energy Harvester Over-Unity Efficiency",
+    "description": "EnergyTech patent claimed an over-unity electromagnetic kinetic generator producing 140% output power relative to input excitation.",
+    "criteria": "National Renewable Energy Laboratory (NREL) calibrated dynamometer test report validating thermodynamic COP > 1.0.",
+    "evidence": [
+      {
+        "source_url": "https://www.nrel.gov/docs/energytech-dynamometer-eval",
+        "mock_content": "NREL Technical Evaluation: Calibrated dynamometer measurements show a coefficient of performance of 0.72. The device operates at a 28% net thermodynamic energy loss.",
+        "source_version": "1.0",
+        "content_hash": "32140d9766cb91789e18aaead5fd85e0789eac407ebefe33cffd352fa94d7962"
+      }
+    ],
+    "expected_verdict": "REJECTED",
+    "supporting_facts": [],
+    "contradictions": [
+      "NREL laboratory test measured COP of 0.72, refuting over-unity output."
+    ],
+    "explanation": "National laboratory physics evaluation confirms thermodynamic deficit."
+  },
+  {
+    "scenario": "REJECTED_CLAIM",
+    "title": "Saliva Biomarker 99% Sensitivity Early Cancer Detection Test",
+    "description": "OncoSaliva marketed a non-invasive saliva screen claiming 99.4% clinical sensitivity in identifying Stage-1 colorectal carcinomas.",
+    "criteria": "FDA 510(k) premarket notification or multi-center clinical validation meeting >=95% sensitivity threshold.",
+    "evidence": [
+      {
+        "source_url": "https://www.fda.gov/inspections-compliance/warning-letters/oncosaliva-letter",
+        "mock_content": "FDA Warning Letter: Multi-center blind trial data demonstrates clinical sensitivity of only 31.8% with an unacceptable 44% false positive rate. Marketing claims are deceptive.",
+        "source_version": "1.0",
+        "content_hash": "2945572c441b3b48b55af0107eb7d2c1aa3f4c3e0415bf20e508df2901d792c5"
+      }
+    ],
+    "expected_verdict": "REJECTED",
+    "supporting_facts": [],
+    "contradictions": [
+      "FDA trial data showed sensitivity of only 31.8% vs 99.4% claimed."
+    ],
+    "explanation": "FDA regulatory warning letter and clinical trial statistics invalidate the claim."
+  },
+  {
+    "scenario": "REJECTED_CLAIM",
+    "title": "Quantum Computer Factorization of RSA-2048 Bit Encryption",
+    "description": "Startup QuantumCipher announced their 1,000-qubit processor factored an RSA-2048 public key in under five minutes.",
+    "criteria": "Cryptographic public key challenge solution verified by NIST or independent academic peer review.",
+    "evidence": [
+      {
+        "source_url": "https://quantum-computing.report/peer-review/quantumcipher-refutation",
+        "mock_content": "Peer Review: Physical analysis of processor noise levels reveals gate fidelity of 96.2%, which is insufficient for Shor's algorithm beyond 15-bit integers. Claim is fabricated.",
+        "source_version": "1.0",
+        "content_hash": "395e6ad1dc99d2bbe311a1ee866f98831aea1fe125d59792aaf908da83d43cbd"
+      }
+    ],
+    "expected_verdict": "REJECTED",
+    "supporting_facts": [],
+    "contradictions": [
+      "Gate fidelity inadequate for quantum factorization of 2048-bit keys."
+    ],
+    "explanation": "Peer review analysis proves hardware is physically incapable of factoring target key."
   },
   {
     "scenario": "INCONCLUSIVE_CLAIM",
-    "title": "Undisclosed Acquisition Rumor",
-    "description": "TechCorp is rumored to have acquired QuantumBio for 500 million dollars in an unannounced private transaction.",
-    "criteria": "Regulatory SEC 8-K filing or official joint corporate press statement confirming transaction terms.",
+    "title": "Undisclosed Acquisition of QuantumBio by Major Pharma",
+    "description": "Market rumors alleged an undisclosed definitive agreement for the acquisition of QuantumBio for $500 million cash.",
+    "criteria": "Official SEC Form 8-K regulatory filing or joint corporate press release confirming acquisition agreement.",
     "evidence": [
       {
-        "source_url": "https://anonymous-leaks.blog.example.com/rumor",
-        "content_hash": "c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2",
+        "source_url": "https://anonymous-rumors.finance-blog.example/quantumbio-sale",
+        "mock_content": "[Source Unreachable: HTTP 503 Server Unavailable - DNS resolution failed]",
         "source_version": "0.1",
-        "mock_content": "[Source Unreachable: HTTP 503 Server Unavailable - DNS resolution failed]"
+        "content_hash": "0eca9424967b44ad96279392e22d83d1a11548c7137cc115b547d5d76c87df1c"
       }
     ],
-    "expected_verdict": "INCONCLUSIVE"
+    "expected_verdict": "INCONCLUSIVE",
+    "supporting_facts": [],
+    "contradictions": [
+      "No registered regulatory filings; primary rumor source is offline."
+    ],
+    "explanation": "Sources were unreachable and no regulatory 8-K filing exists to confirm transaction."
+  },
+  {
+    "scenario": "INCONCLUSIVE_CLAIM",
+    "title": "James Webb Telescope Detection of Biogenic Methane on K2-18b",
+    "description": "Science blog reported JWST spectroscopic observations definitively confirmed presence of biological-origin dimethyl sulfide on exoplanet K2-18b.",
+    "criteria": "NASA Space Telescope Science Institute peer-reviewed data release confirming statistical confidence >= 5-sigma.",
+    "evidence": [
+      {
+        "source_url": "https://stsci.edu/jwst/science-advisories/k2-18b-preliminary",
+        "mock_content": "STScI Science Advisory: Preliminary atmospheric transmission spectra show overlapping trace features at 2.4-sigma confidence. Data remains statistically inconclusive pending Cycle 4 observations.",
+        "source_version": "1.0",
+        "content_hash": "f44572fe43f825eac73f55455d35b3c79d17ecaf89d47934bf3116b460d8a503"
+      }
+    ],
+    "expected_verdict": "INCONCLUSIVE",
+    "supporting_facts": [],
+    "contradictions": [
+      "Detection confidence is only 2.4-sigma, well below required 5-sigma discovery threshold."
+    ],
+    "explanation": "Observational data lacks required statistical significance to substantiate claim."
+  },
+  {
+    "scenario": "INCONCLUSIVE_CLAIM",
+    "title": "Archaeological Seal Inscription Exact 1200 BCE Chronology",
+    "description": "Epigraphic society asserted newly discovered Levantine cylinder seal dates precisely to 1200 BCE based on carbon strata.",
+    "criteria": "Accelerator mass spectrometry (AMS) radiocarbon dating with standard deviation <= 25 years.",
+    "evidence": [
+      {
+        "source_url": "https://radiocarbon.oxford.edu/reports/levant-seal-ox2026",
+        "mock_content": "Oxford Radiocarbon Lab: Strata charcoal yielded calibrated date range 1410 - 1050 BCE (95.4% probability). Inherent calibration plateau precludes narrowing date to single decade.",
+        "source_version": "1.0",
+        "content_hash": "1f4c33eda4a6fd6e04d8366e13b9cd63583a52b8e7302f9dcc3092282046e011"
+      }
+    ],
+    "expected_verdict": "INCONCLUSIVE",
+    "supporting_facts": [],
+    "contradictions": [
+      "Dating confidence range spans 360 years; exact 1200 BCE date cannot be confirmed."
+    ],
+    "explanation": "Scientific carbon dating confidence interval is too wide to confirm specific year."
   },
   {
     "scenario": "DISPUTED_CLAIM",
-    "title": "Carbon Removal Offset Verification",
+    "title": "EcoCapture Carbon Removal Geological Storage Permanence",
     "description": "EcoCapture certified 100,000 metric tons of permanent geological carbon removal in Q3 2026 at Site Alpha.",
     "criteria": "Third-party MRV (Monitoring, Reporting, and Verification) audit certificate with direct sensor telemetry.",
     "evidence": [
       {
         "source_url": "https://mrv-audits.org/reports/ecocapture-q3-2026",
-        "content_hash": "d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3",
+        "mock_content": "Preliminary Certification: Sensor telemetry indicates 100,000 metric tons injected. Awaiting secondary isotope confirmation.",
         "source_version": "1.0",
-        "mock_content": "Preliminary Certification: Sensor telemetry indicates 100,000 metric tons injected. Awaiting secondary isotope confirmation."
+        "content_hash": "946106defc7156ef93f9eb8fc4d85d781eb7034ead69317801e4cdcccb986b19"
       }
     ],
+    "expected_verdict": "DISPUTED",
+    "supporting_facts": [
+      "Preliminary sensor telemetry confirms injection volume."
+    ],
+    "contradictions": [],
+    "explanation": "Initial verification accepted preliminary sensor data, but dispute challenging permanence is actively open.",
     "dispute": {
       "reason": "Secondary isotope analysis published on November 10 showed injection chamber leak of 15,000 tons, contesting permanent removal claims.",
       "resolution": "Re-evaluation approved with secondary isotope survey evidence attached."
-    },
-    "expected_verdict": "DISPUTED"
+    }
+  },
+  {
+    "scenario": "DISPUTED_CLAIM",
+    "title": "Decentralized Lending Oracle Sub-Second Price Feed Accuracy",
+    "description": "Oracle network claimed its high-frequency price feed maintained maximum latency under 500ms and deviation under 0.05% during market volatility.",
+    "criteria": "On-chain heartbeat timestamp analysis and independent arbitrage telemetry log.",
+    "evidence": [
+      {
+        "source_url": "https://oracle-metrics.org/feed/eth-usd-stress-test",
+        "mock_content": "Telemetry Snapshot: 99.8% of heartbeat updates landed within 480ms during volatility stress test.",
+        "source_version": "1.0",
+        "content_hash": "ebf56197e44d5791219628cd6343a2346f62b2b52adceeccff08124c4c081b16"
+      }
+    ],
+    "expected_verdict": "DISPUTED",
+    "supporting_facts": [
+      "Telemetry log indicates 99.8% heartbeats met latency spec."
+    ],
+    "contradictions": [],
+    "explanation": "Initial performance data approved, but liquidation victims disputed an unrecorded 14-second blackout.",
+    "dispute": {
+      "reason": "Borrower consortium submitted on-chain transaction traces proving a 14-second stale oracle heartbeat during block 20491823 triggered $420k unwarranted liquidations.",
+      "resolution": "Dispute lodged under validator arbitration review."
+    }
+  },
+  {
+    "scenario": "DISPUTED_CLAIM",
+    "title": "Phase II Oncology Trial Progression-Free Survival Rate",
+    "description": "Biotech firm announced 88% progression-free survival endpoint met in Phase II non-small cell lung carcinoma clinical trial.",
+    "criteria": "Independent Data Monitoring Committee (IDMC) validated statistical analysis plan and unblinded cohort report.",
+    "evidence": [
+      {
+        "source_url": "https://clinicaltrials.gov/study/NCT06294012/preliminary-pfs",
+        "mock_content": "Sponsor Preliminary Summary: 44 of 50 patients demonstrated progression-free survival at month 12.",
+        "source_version": "1.0",
+        "content_hash": "95299cb16182b96603e8a6b918efe5d6849e814004c9e92de92e5deac1a5ef9f"
+      }
+    ],
+    "expected_verdict": "DISPUTED",
+    "supporting_facts": [
+      "Sponsor summary shows 44 of 50 patients reached month 12 PFS."
+    ],
+    "contradictions": [],
+    "explanation": "Sponsor interim filing accepted, but institutional monitoring committee challenged cohort selection bias.",
+    "dispute": {
+      "reason": "Data Monitoring Committee notified regulators of improper exclusion of 12 drop-out patients from the evaluable denominator, artificially inflating survival percentage.",
+      "resolution": "Formal audit initiated; claim remains in DISPUTED state."
+    }
   }
 ]
