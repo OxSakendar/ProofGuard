@@ -4,8 +4,12 @@
 [![GenLayer GenVM](https://img.shields.io/badge/GenLayer-Intelligent%20Contract-8A2BE2.svg)](https://docs.genlayer.com)
 [![Tests Passing](https://img.shields.io/badge/pytest-56%20passed-brightgreen.svg)](tests/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Contract Deployed](https://img.shields.io/badge/GenLayer%20Studio-0x4C70...De7f-success.svg)](https://explorer-studio.genlayer.com/address/0x4C70439026aBBE1b2eC5F991Cdc8A6E6C498De7f)
 
 **ProofGuard** is a production-minded GenLayer Intelligent Contract that independently evaluates real-world assertions against external web evidence using GenLayer's non-deterministic execution environment, multi-validator committee consensus, and the **Equivalence Principle**.
+
+> **Live Contract Address:** [`0x4C70439026aBBE1b2eC5F991Cdc8A6E6C498De7f`](https://explorer-studio.genlayer.com/address/0x4C70439026aBBE1b2eC5F991Cdc8A6E6C498De7f)  
+> **Studio Explorer:** [https://explorer-studio.genlayer.com/address/0x4C70439026aBBE1b2eC5F991Cdc8A6E6C498De7f](https://explorer-studio.genlayer.com/address/0x4C70439026aBBE1b2eC5F991Cdc8A6E6C498De7f)
 
 ---
 

@@ -67,7 +67,17 @@ The script will output:
 
 ---
 
-## 4. Post-Deployment Verification Workflow
+## 4. Deployed Contract Reference
+
+- **GenLayer Studio Explorer:** [https://explorer-studio.genlayer.com/address/0x4C70439026aBBE1b2eC5F991Cdc8A6E6C498De7f](https://explorer-studio.genlayer.com/address/0x4C70439026aBBE1b2eC5F991Cdc8A6E6C498De7f)
+- **Bradbury Testnet Explorer:** [https://explorer-bradbury.genlayer.com/address/0x4C70439026aBBE1b2eC5F991Cdc8A6E6C498De7f](https://explorer-bradbury.genlayer.com/address/0x4C70439026aBBE1b2eC5F991Cdc8A6E6C498De7f)
+- **Contract Address:** `0x4C70439026aBBE1b2eC5F991Cdc8A6E6C498De7f`
+- **Compiler Version:** `# v0.3.0`
+- **Dependency:** `py-genlayer:9b8kjyda2ycxyq4ea6g4yfpnydxhd52gqba5rb8dw7krkh5mn9p0`
+
+---
+
+## 5. Post-Deployment Verification Workflow
 
 Once deployed, you can interact with your contract using `genlayer-py`:
 
