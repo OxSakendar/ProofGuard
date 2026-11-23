@@ -1,0 +1,66 @@
+[
+  {
+    "scenario": "VERIFIED_CLAIM",
+    "title": "AlphaGenome v2 Release Announcement",
+    "description": "Google DeepMind officially released AlphaGenome v2 on October 15, 2026, introducing full-genome non-coding variant impact scoring.",
+    "criteria": "Official press release or scientific publication confirming AlphaGenome v2 release date and non-coding variant prediction capabilities.",
+    "evidence": [
+      {
+        "source_url": "https://deepmind.google/discover/blog/alphagenome-v2",
+        "content_hash": "a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90",
+        "source_version": "1.0",
+        "mock_content": "October 15, 2026: DeepMind announces AlphaGenome v2, a state-of-the-art model for full-genome non-coding variant impact prediction."
+      }
+    ],
+    "expected_verdict": "VERIFIED"
+  },
+  {
+    "scenario": "REJECTED_CLAIM",
+    "title": "Claim of Artificial General Intelligence Milestone",
+    "description": "LabX claimed their synthetic biology agent achieved autonomous general intelligence passing all human benchmarks on November 1, 2026.",
+    "criteria": "Independent peer-reviewed verification or consensus confirmation of autonomous general intelligence without human intervention.",
+    "evidence": [
+      {
+        "source_url": "https://audit.ai-standards.org/evaluations/labx-debunk",
+        "content_hash": "b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90a1",
+        "source_version": "1.0",
+        "mock_content": "Official Audit: The LabX submission contained prompt leakage and pre-programmed test outputs. The claim of autonomous general intelligence is formally refuted."
+      }
+    ],
+    "expected_verdict": "REJECTED"
+  },
+  {
+    "scenario": "INCONCLUSIVE_CLAIM",
+    "title": "Undisclosed Acquisition Rumor",
+    "description": "TechCorp is rumored to have acquired QuantumBio for 500 million dollars in an unannounced private transaction.",
+    "criteria": "Regulatory SEC 8-K filing or official joint corporate press statement confirming transaction terms.",
+    "evidence": [
+      {
+        "source_url": "https://anonymous-leaks.blog.example.com/rumor",
+        "content_hash": "c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2",
+        "source_version": "0.1",
+        "mock_content": "[Source Unreachable: HTTP 503 Server Unavailable - DNS resolution failed]"
+      }
+    ],
+    "expected_verdict": "INCONCLUSIVE"
+  },
+  {
+    "scenario": "DISPUTED_CLAIM",
+    "title": "Carbon Removal Offset Verification",
+    "description": "EcoCapture certified 100,000 metric tons of permanent geological carbon removal in Q3 2026 at Site Alpha.",
+    "criteria": "Third-party MRV (Monitoring, Reporting, and Verification) audit certificate with direct sensor telemetry.",
+    "evidence": [
+      {
+        "source_url": "https://mrv-audits.org/reports/ecocapture-q3-2026",
+        "content_hash": "d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3",
+        "source_version": "1.0",
+        "mock_content": "Preliminary Certification: Sensor telemetry indicates 100,000 metric tons injected. Awaiting secondary isotope confirmation."
+      }
+    ],
+    "dispute": {
+      "reason": "Secondary isotope analysis published on November 10 showed injection chamber leak of 15,000 tons, contesting permanent removal claims.",
+      "resolution": "Re-evaluation approved with secondary isotope survey evidence attached."
+    },
+    "expected_verdict": "DISPUTED"
+  }
+]

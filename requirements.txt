@@ -1,0 +1,9 @@
+# ProofGuard: Decentralized Evidence Verification Intelligent Contract Dependencies
+genlayer-py>=0.16.0
+genlayer-test>=0.29.0
+pytest>=8.0.0
+web3>=7.0.0
+pydantic>=2.4.0
+python-dotenv>=1.0.0
+pyyaml>=6.0.0
+flask>=3.0.0
