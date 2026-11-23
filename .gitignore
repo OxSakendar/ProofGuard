@@ -48,3 +48,7 @@ htmlcov/
 *.swo
 .DS_Store
 Thumbs.db
+
+# Local runtime data
+data/
+

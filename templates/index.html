@@ -139,9 +139,9 @@
         <button onclick="filterClaims('DISPUTED')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-800 hover:bg-slate-700 text-slate-300" data-filter="DISPUTED">Disputed</button>
       </div>
 
-      <button onclick="loadClaims()" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 transition-all">
-        <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
-        <span>Refresh Registry</span>
+      <button id="btn-refresh" onclick="loadClaims(true)" class="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 transition-all active:scale-95 shadow-sm">
+        <i data-lucide="refresh-cw" id="icon-refresh" class="w-3.5 h-3.5 text-brand-400"></i>
+        <span id="text-refresh">Refresh Registry</span>
       </button>
     </div>
 
@@ -293,15 +293,40 @@
       }
     }
 
-    async function loadClaims() {
+    async function loadClaims(isManual = false) {
+      const btnText = document.getElementById('text-refresh');
+      const icon = document.getElementById('icon-refresh');
+      if (isManual && icon && btnText) {
+        icon.classList.add('animate-spin');
+        btnText.innerText = 'Refreshing...';
+      }
+
       try {
         const res = await fetch('/api/claims');
         const data = await res.json();
         allClaims = data.claims || [];
         renderClaims();
-        loadStats();
+        await loadStats();
+
+        if (isManual && btnText) {
+          btnText.innerText = 'Refreshed!';
+          setTimeout(() => {
+            btnText.innerText = 'Refresh Registry';
+          }, 1200);
+        }
       } catch (e) {
         console.error("Failed to load claims", e);
+        if (isManual && btnText) {
+          btnText.innerText = 'Failed to load';
+          setTimeout(() => {
+            btnText.innerText = 'Refresh Registry';
+          }, 1500);
+        }
+      } finally {
+        if (icon) {
+          icon.classList.remove('animate-spin');
+          lucide.createIcons();
+        }
       }
     }
 
@@ -345,9 +370,13 @@
         };
         const color = statusColors[c.status] || 'bg-slate-800 text-slate-300 border-slate-700';
 
-        const canVerify = ['SUBMITTED', 'PENDING_VERIFICATION', 'DISPUTED'].includes(c.status) && c.evidence_sources.length > 0;
+        const evidenceList = Array.isArray(c.evidence_sources) ? c.evidence_sources : [];
+        const canVerify = ['SUBMITTED', 'PENDING_VERIFICATION', 'DISPUTED'].includes(c.status) && evidenceList.length > 0;
         const canDispute = ['VERIFIED', 'REJECTED', 'INCONCLUSIVE'].includes(c.status);
         const canAddEvidence = ['SUBMITTED', 'PENDING_VERIFICATION', 'DISPUTED'].includes(c.status);
+
+        const creatorStr = String(c.creator || '');
+        const creatorShort = creatorStr.length > 14 ? (creatorStr.slice(0, 8) + '...' + creatorStr.slice(-6)) : (creatorStr || 'Anonymous');
 
         return `
           <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-slate-700/80 transition-all shadow-lg space-y-4">
@@ -359,24 +388,24 @@
                 </span>
               </div>
               <div class="text-xs text-slate-500 font-mono">
-                Creator: ${c.creator.slice(0, 8)}...${c.creator.slice(-6)}
+                Creator: ${creatorShort}
               </div>
             </div>
 
             <div>
-              <h4 class="text-lg font-bold text-white mb-1">${escapeHtml(c.title)}</h4>
-              <p class="text-sm text-slate-300 leading-relaxed">${escapeHtml(c.description)}</p>
+              <h4 class="text-lg font-bold text-white mb-1">${escapeHtml(c.title || 'Untitled Claim')}</h4>
+              <p class="text-sm text-slate-300 leading-relaxed">${escapeHtml(c.description || '')}</p>
             </div>
 
             <div class="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800/80 text-xs">
               <span class="font-semibold text-slate-400 block mb-0.5">Verification Criteria:</span>
-              <p class="text-slate-300 italic">${escapeHtml(c.criteria)}</p>
+              <p class="text-slate-300 italic">${escapeHtml(c.criteria || '')}</p>
             </div>
 
             <!-- Evidence badges -->
             <div class="space-y-1.5">
               <div class="text-xs font-semibold text-slate-400 flex items-center justify-between">
-                <span>Registered Evidence Sources (${c.evidence_sources.length})</span>
+                <span>Registered Evidence Sources (${evidenceList.length})</span>
                 ${canAddEvidence ? `
                   <button onclick="openEvidenceModal('${c.claim_id}')" class="text-brand-400 hover:text-brand-300 text-xs flex items-center space-x-1">
                     <i data-lucide="plus" class="w-3 h-3"></i><span>Add Source</span>
@@ -386,17 +415,21 @@
 
               ${c.evidence_details && c.evidence_details.length > 0 ? `
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
-                  ${c.evidence_details.map(ev => `
-                    <div class="p-2.5 rounded-lg bg-slate-800/50 border border-slate-700/50 flex flex-col text-xs">
-                      <div class="flex items-center justify-between text-slate-300 font-medium truncate">
-                        <a href="${ev.source_url}" target="_blank" class="text-brand-400 hover:underline flex items-center space-x-1 truncate">
-                          <i data-lucide="external-link" class="w-3 h-3 inline"></i>
-                          <span class="truncate">${ev.source_url}</span>
-                        </a>
+                  ${c.evidence_details.map(ev => {
+                    const hashStr = String(ev.content_hash || '');
+                    const hashShort = hashStr.length > 16 ? hashStr.slice(0, 16) + '...' : hashStr;
+                    return `
+                      <div class="p-2.5 rounded-lg bg-slate-800/50 border border-slate-700/50 flex flex-col text-xs">
+                        <div class="flex items-center justify-between text-slate-300 font-medium truncate">
+                          <a href="${ev.source_url}" target="_blank" class="text-brand-400 hover:underline flex items-center space-x-1 truncate">
+                            <i data-lucide="external-link" class="w-3 h-3 inline"></i>
+                            <span class="truncate">${ev.source_url}</span>
+                          </a>
+                        </div>
+                        <span class="text-2xs font-mono text-slate-500 truncate mt-1">Hash: ${hashShort}</span>
                       </div>
-                      <span class="text-2xs font-mono text-slate-500 truncate mt-1">Hash: ${ev.content_hash.slice(0, 16)}...</span>
-                    </div>
-                  `).join('')}
+                    `;
+                  }).join('')}
                 </div>
               ` : `
                 <p class="text-xs text-slate-500 italic">No evidence registered yet.</p>
@@ -408,9 +441,9 @@
               <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-700/60 space-y-2 text-xs">
                 <div class="flex items-center justify-between font-semibold">
                   <span class="text-slate-300">Latest Consensus Verdict:</span>
-                  <span class="text-brand-300">${c.verification_details.verdict}</span>
+                  <span class="text-brand-300 font-bold">${c.verification_details.verdict}</span>
                 </div>
-                <p class="text-slate-300 leading-normal">${escapeHtml(c.verification_details.explanation)}</p>
+                <p class="text-slate-300 leading-normal">${escapeHtml(c.verification_details.explanation || '')}</p>
                 ${c.verification_details.contradictions && c.verification_details.contradictions.length > 0 ? `
                   <div class="text-rose-400 pt-1">
                     <span class="font-semibold">Contradictions identified:</span>

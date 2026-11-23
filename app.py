@@ -33,6 +33,43 @@ vm = MockGenVM()
 with vm.prank(ALICE):
     contract = ProofGuard()
 
+STATE_FILE = Path(__file__).resolve().parent / "data" / "proofguard_state.json"
+
+
+def save_state():
+    """Persists contract state to disk so claims are never lost on reload."""
+    try:
+        payload = {
+            "claims_count": int(contract.claims_count),
+            "claims": dict(contract.claims),
+            "evidence_store": dict(contract.evidence_store),
+            "verifications": dict(contract.verifications),
+            "disputes": dict(contract.disputes),
+        }
+        STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(STATE_FILE, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2)
+    except Exception as e:
+        print(f"[WARN] Failed to save state: {e}")
+
+
+def load_state():
+    """Loads persisted state from disk if available, otherwise seeds demo claims."""
+    if STATE_FILE.exists():
+        try:
+            with open(STATE_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            contract.claims_count = data.get("claims_count", 0)
+            contract.claims = data.get("claims", {})
+            contract.evidence_store = data.get("evidence_store", {})
+            contract.verifications = data.get("verifications", {})
+            contract.disputes = data.get("disputes", {})
+            print(f"[STATE] Loaded {len(contract.claims)} claims from disk.")
+            return True
+        except Exception as e:
+            print(f"[WARN] Failed to load state: {e}")
+    return False
+
 
 def fetch_live_url(url: str, timeout: int = 10) -> str:
     """Fetches real content from a live HTTPS URL over the internet."""
@@ -92,7 +129,10 @@ def seed_demo_data():
                 contract.add_evidence(claim_id=cid, source_url=url, content_hash=chash)
 
 
-seed_demo_data()
+# Seed initial demo data at startup only if no saved state exists
+if not load_state():
+    seed_demo_data()
+    save_state()
 
 
 @app.route("/")
@@ -194,6 +234,7 @@ def submit_claim():
     try:
         with vm.prank(sender):
             cid = contract.submit_claim(title=title, description=description, criteria=criteria)
+        save_state()
         return jsonify({"success": True, "claim_id": cid}), 201
     except Exception as err:
         return jsonify({"error": str(err)}), 400
@@ -248,6 +289,7 @@ def add_evidence(claim_id):
                 content_hash=content_hash,
                 source_version=source_version,
             )
+        save_state()
         return jsonify({
             "success": True,
             "evidence_id": eid,
@@ -332,6 +374,7 @@ def verify_claim(claim_id):
 
         with vm.prank(sender):
             result = contract.verify_claim(claim_id)
+        save_state()
         return jsonify({"success": True, "verification": result})
     except Exception as err:
         return jsonify({"error": str(err)}), 400
@@ -346,6 +389,7 @@ def open_dispute(claim_id):
     try:
         with vm.prank(sender):
             did = contract.open_dispute(claim_id=claim_id, reason=reason)
+        save_state()
         return jsonify({"success": True, "dispute_id": did}), 201
     except Exception as err:
         return jsonify({"error": str(err)}), 400
@@ -365,6 +409,7 @@ def resolve_dispute(claim_id):
                 dispute_id=dispute_id,
                 resolution_notes=resolution_notes,
             )
+        save_state()
         return jsonify({"success": True, "resolution": res})
     except Exception as err:
         return jsonify({"error": str(err)}), 400
